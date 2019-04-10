@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 67.5%;
+    height: 100%;
+}
+
+#wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 55vw;
+    overflow: hidden;
+}
+/**/
+.layer {
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+    overflow: hidden;
+}
+
+.layer .content-wrap {
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+}
+
+.layer .content-body {
+    position: absolute;
+    width: 25%;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.layer h1 {
+    font-size: 2.5rem;
+}
+
+.bottom {
+    background-color: rgb(44, 44, 44);
+    object-fit: cover;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 0;
+}
+
+.bottom .content-body {
+    right: 5%;
+    color: #fff;
+
+}
+
+
+.top {
+    background-color: rgb(223, 223, 223);
+    object-fit: cover;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50vw;
+}
+
+.top .content-body {
+    left: 5%;
+    color: #222;
+}
+
+.handle {
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: goldenrod;
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 10;
+}
+
+.skewed .handle{
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin: top;
+}
+
+.skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+
+}
+
+.skewed .top .content-wrap {
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
